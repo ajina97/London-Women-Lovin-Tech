@@ -1,148 +1,232 @@
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>London Women Lovin' Tech</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="./main.css">
+</head>
+<body> 
+  <header>
+    <div class="title">
+      <h1>London Women Lovin' Tech</h1>
+    </div>
+    <div class="topBar">
 
-body
-{
-  font-family: sans-serif;
-  line height: 1.6;
-  font-size: 18px;
-  font-family: sans-serif;
-}
 
-li{
-  list-style: none;
-  align-content: center;
-}
+      <div class="sidenav">
+        <button class="dropdown-btn">Menu
+        </button>
+        <div class="dropdown-container">
+          <a href="./index.html">Home</a>
+          <a href="./events.html">Events</a>
+          <a href="#">Courses</a>
+          <a href="#">Career Opportunities</a>
+          <a href="./contact us.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <script>
+    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
 
-a{
-text-decoration: none;
-}
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+        } else {
+          dropdownContent.style.display = "block";
+        }
+      });
+    }
+  </script>
 
-header {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-padding: 0.4rem 1rem;
-  background: pink;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 0 0 4px rgba(red, green, blue, alpha) (0,0,0,0.5);
-  z-index: 10;
-}
-.branding {
-  font-weight: bold;
-  color: white;
-  font-size: 1.5rem;
-}
 
-.nav ul {
-display: flex;
-font-size: 0.9rem;
-}
+  <div class="statement">
+    <p class="top">Together, we're building the next</p>
+    <p>generation of leaders in technology.</p>
+  </div>
 
-.nav ul li {
-  padding-right: 1rem;
-}
+  <div class="subscribeToNewsletter">
+    <div>
+      <h1>Join the revolution!</h1>
+    </div>
+    <div>
+      <p>You'll be invited to our latest events and you'll hear first about our exclusive courses.</p>
+    </div>
+    <div class="emailAndButton">
+      <input type="text" placeholder="Your email"/>
+    </div>
+    <div class="emailAndButton">
+      <button class="button">Subscribe</button>
+    </div>
+  </div>
 
-.nav ul li a{
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #333;
+  <div class="events">
+    <h1> Events </h1>
+    <div class="row">
+      <div class="column">
+        <img src="events1.png" alt="Event 1" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="events2.png" alt="Event 2" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="events3.png" alt="Event 3" style="width:100%">
+      </div>
+    </div>
+  </div>
+  <div class="latestNews">
+   <h1> Latest News </h1>
 
-}
+   <!-- Slideshow container -->
+   <div class="slideshow-container">
 
-.nav ul li a:hover{
-  color: red;
-}
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="news1.png" style="width:100%">
+      <div class="text">
+        <h1>7 Ways to Secure Funding for Your Tech Startup</h1>
+        <h3>In the early stage of launching a startup, it’s normal to be so enraptured with your idea that you develop a sort of tunnel vision. Read more </h3>
+      </div>
+    </div>
 
-#newsletter {
-  background: mediumvioletred;
-  padding: 2rem 0;
-  color: white;
-  text-align: center;
-}
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="news2.png" style="width:100%">
+      <div class="text">
+        <h1>Why Programming is an Essential Skill for More Than Just Developers!</h1>
+        <h3>Without programmers writing programs telling computers and other technological devices what to do, they would literally be doing... Read more</h3>
+      </div>
+    </div>
 
-.newsletter-title {
-  font-size: 1.2rem;
-  position: relative
-}
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="news3.png" style="width:100%">
+      <div class="text">
+        <h1>10 Tech Careers You Can Do Remotely In 2020</h1>
+        <h3>If you love to figure out and fix a dilemma or obstacle, then a coding career is likely your dream. Or, if you’re able to create digital work that’s unique... Read more</h3>
+      </div>
+    </div>
 
-.newsletter-title p:nth-child(2) {
-  font-size: 1rem;
-}
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
 
-.newsletter-title p::after {
-  content: "";
-  position: absolute;
-  width: 60px;
-  height: 8px;
-  background: mediumorchid;
-  bottom: -1.7rem;
-  left: 50%;
-  margin-left: -30px;
-}
+            // Next/previous controls
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
 
-.newsletter-input{
-margin: 1rem auto;
-padding: 3rem auto;
-max width: 500px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-position: relative;
-}
+            // Thumbnail image controls
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
 
-.newsletter-input input {
-  border: none;
-  outline: none;
-  height: 2.5rem;
-  border-radius: 1.25rem;
-  text-indent:15px;
-  font-size: 1rem;
-  color: #333;
-}
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1} 
+                if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none"; 
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block"; 
+                  dots[slideIndex-1].className += " active";
+                }
+              </script>
 
-  .newsletter-input input: :nth-child(1) {
-   flex-bases: 220px;
-  }
+              <!-- Next and previous buttons -->
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
 
-  .newsletter-input input: :nth-child(2) {
-    flex-bases: 450px;
-   }
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
 
-   .newsletter-input input: :nth-child(3) {
-    position: absolute;
-    margin:0;
-    padding:2;
-    right: 0;
-    color: white;
-    text-align: center;
-    text-indent: 0;
-   }
+          </div>
+          <div class="newsFromCareers">
+           <h1> Newest from Career Opportunities </h1>
 
-   #footer {
-     background:mediumvioletred;
-     padding: 3rem;
-   }
+           <div class="rowCareers">
+            <div class="columnCareers">
+              <div class="cardCareers">
+                <img src="career1.png" alt="Jane" style="width:100%">
+                <div class="containerCareers">
+                  <h2>Trainee Software Developer - No Experience Required</h2>
+                  <p class="titleCareers">March 11, 2020</p>
+                  <p><button class="buttonCareers">Apply</button></p>
+                </div>
+              </div>
+            </div>
 
-   .footer-wrapper {
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
-     color: black;
-   }
+            <div class="columnCareers">
+              <div class="cardCareers">
+                <img src="career2.png" alt="Mike" style="width:100%">
+                <div class="containerCareers">
+                  <h2>Junior Python Software Engineer Industrial Placement</h2>
+                  <p class="titleCareers">March 13, 2020</p>
+                  <p><button class="buttonCareers">Apply</button></p>
+                </div>
+              </div>
+            </div>
 
-   .footer-wrapper .years p {
-     font-size: 1rem;
-   }
+            <div class="columnCareers">
+              <div class="cardCareers">
+                <img src="career3.png" alt="John" style="width:100%">
+                <div class="containerCareers">
+                  <h2>STEM Graduate needed for a Easter Holiday Coding Camp</h2>
+                  <p class="titleCareers">March 24, 2020</p>
+                  <p><button class="buttonCareers">Apply</button></p>
+                </div>
+              </div>
+            </div>
+          </div>
 
-   .footer-wrapper .icons i {
-  font-size: 1.4rem;
-  margin-right: 1rem;
-  cursor: pointer;
-   }
+        </div>
+
+        <div class="divFooter"> 
+
+        </div>
+
+        <footer>
+          <div class="footerTitle">
+            <h2>London Women Lovin' Tech</h2>
+          </div>
+          <div class="pill-nav">
+            <a class="active" href="#About">About</a>
+            <a href="#Events">Events</a>
+            <a href="#Courses">Courses</a>
+            <a href="#Career Opportunities">Career opportunities</a>
+            <a href="#Contact us">Contact us</a>
+          </div>
+          <div class="socialMedia">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+          </div>
+        </footer>
+        <div class="copyright">
+          <p>© London Women Lovin' Tech Copyright 2020</p>
+        </div>
+      </body>
+
+
+      </html> 
