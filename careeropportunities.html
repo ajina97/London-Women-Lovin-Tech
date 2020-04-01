@@ -1,64 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>London Women Lovin' Tech</title>
-    <link rel="stylesheet" href="css/careeropportunities.css">
-  </head>
-  <body> 
-    <header>
-      <div class="branding">London Women Lovin' Tech</div>
-        <div class="nav">
-            <ul>
-                <li><a href="/Users/Ajina/Desktop/London Women Lovin Tech/index.html"><li>Home</a></li>
-                <li><a href="/Users/Ajina/Desktop/London Women Lovin Tech/events.html"><li>Events</a></li>
-                <li><a href="/Users/Ajina/Desktop/London Women Lovin Tech/courses.html"><li>Courses</a></li>
-                <li><a href="/Users/Ajina/Desktop/London Women Lovin Tech/careeropportunities.html"><li>Career Opportunities</a></li>
-                <li><a href="/Users/Ajina/Desktop/London Women Lovin Tech/contact us.html"><li>Contact Us</a></li>
-              </ul>
-            </div>
-          </header>
-          <header>
-              <h1>
-                  Career Opportunities
-              </h1>
-              <p>
-Below is a list of vancies currently open for women in technology in the UK:              
-</p>
-             
-          </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>London Women Lovin' Tech</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="careeropportunities.css">
+</head>
+<body> 
+  <header>
+    <div class="title">
+      <h1>London Women Lovin' Tech</h1>
+    </div>
+    <div class="topBar">
 
-    <section id="newsletter">
-  <div class="container">
-    <div class="newsletter-title">
-      <p>Join London Women Lovin' Tech newsletter and be among the first ones to receive our latest news, courses and events</p>
-      <p> You can unsubscribe at any time.</p>
+
+      <div class="sidenav">
+        <button class="dropdown-btn">Menu
+        </button>
+        <div class="dropdown-container">
+          <a href="./index.html">Home</a>
+          <a href="aboutus.html">About Us</a>
+          <a href="./events.html">Events</a>
+          <a href="./courses.html">Courses</a>
+          <a href="./careeropportunities.html">Career Opportunities</a>
+          <a href="./contact us.html">Contact Us</a>
+        </div>
+      </div>
     </div>
-  </div> 
-  <div class="newsletter-input">
-    <input type="text"
-    placeholder="Enter your Name"/>
-    <input type="text"
-    placeholder="Your email"/>
-    <input type="submit" name="submit" value="Subscribe" id="submit"></input>
+  </header>
+  <script>
+    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+        } else {
+          dropdownContent.style.display = "block";
+        }
+      });
+    }
+  </script>
+
+<div class="aboutus">
+    <p class="top">Career Opportunities</p>
   </div>
-  </section>   
-  </body>
+
+  <div class="image"></div>
+
+  <div class="statement">
+      <p class="middle">Below is a list of vancies currently open for Women interested in the Technology industry: </p>
+    </div>
   
-  <footer>
-    <div class="container">
-      <div class="footer-wrapper">
-      <div class="years">
-        <p>Lovin Women Lovin' Tech &copy; 2020</p>
+  </div>
+  <div class="newsFromCareers">
+
+   <div class="rowCareers">
+    <div class="columnCareers">
+      <div class="cardCareers">
+        <img src="career1.png" alt="Jane" style="width:100%">
+        <div class="containerCareers">
+          <h2>Trainee Software Developer - No Experience Required</h2>
+          <p class="titleCareers">April 11, 2020</p>
+          <p><button class="buttonCareers">Apply</button></p>
+        </div>
       </div>
-      <div class="icons">
-      <i class="fab fa-facebook-f"></i>
-      <i class="fab fa-twitter"></i>
-      <i class="fab fa-instagram"></i>
+    </div>
+
+    <div class="columnCareers">
+      <div class="cardCareers">
+        <img src="career2.png" alt="Mike" style="width:100%">
+        <div class="containerCareers">
+          <h2>Junior Python Software Engineer Industrial Placement</h2>
+          <p class="titleCareers">April 13, 2020</p>
+          <p><button class="buttonCareers">Apply</button></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columnCareers">
+      <div class="cardCareers">
+        <img src="career3.png" alt="John" style="width:100%">
+        <div class="containerCareers">
+          <h2>STEM Graduate needed for a Easter Holiday Coding Camp</h2>
+          <p class="titleCareers">April 24, 2020</p>
+          <p><button class="buttonCareers">Apply</button></p>
+        </div>
       </div>
     </div>
   </div>
-    </footer>
-    </html>
+</div>
+
+<div class="newsFromCareers">
+
+    <div class="rowCareers">
+     <div class="columnCareers">
+       <div class="cardCareers">
+         <img src="career2.png" alt="Jane" style="width:100%">
+         <div class="containerCareers">
+           <h2>Web Designer needed for Neuvoo UK</h2>
+           <p class="titleCareers">May 5, 2020</p>
+           <p><button class="buttonCareers">Apply</button></p>
+         </div>
+       </div>
+     </div>
+ 
+     <div class="columnCareers">
+       <div class="cardCareers">
+         <img src="career3.png" alt="Mike" style="width:100%">
+         <div class="containerCareers">
+           <h2>Head of Technology - eCommece Exerience Required</h2>
+           <p class="titleCareers">May 17, 2020</p>
+           <p><button class="buttonCareers">Apply</button></p>
+         </div>
+       </div>
+     </div>
+ 
+     <div class="columnCareers">
+       <div class="cardCareers">
+         <img src="career1.png" alt="John" style="width:100%">
+         <div class="containerCareers">
+           <h2>Technical Consultant (Java)- Technology Consultancy</h2>
+           <p class="titleCareers">May 28, 2020</p>
+           <p><button class="buttonCareers">Apply</button></p>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+
+<div class="subscribeToNewsletter">
+    <div>
+      <h1>Join the revolution!</h1>
+    </div>
+    <div>
+      <p>You'll be invited to our latest events and you'll hear first about our exclusive courses.</p>
+    </div>
+    <div class="emailAndButton">
+      <input type="text" placeholder="Your email"/>
+    </div>
+    <div class="emailAndButton">
+      <button class="button">Subscribe</button>
+    </div>
+  </div>
+  <div class="divFooter"> 
+
+  </div>
+<footer>
+<div class="footerTitle">
+  <h2>London Women Lovin' Tech</h2>
+</div>
+<div class="pill-nav">
+  <a class="active" href="index.html">Home</a>
+  <a href="aboutus.html">About</a>
+  <a href="events.html">Events</a>
+  <a href="courses.html">Courses</a>
+  <a href="careeropportunities.html">Career opportunities</a>
+  <a href="contact us.html">Contact us</a>
+</div>
+<div class="socialMedia">
+  <a href="#" class="fa fa-facebook"></a>
+  <a href="#" class="fa fa-twitter"></a>
+  <a href="#" class="fa fa-linkedin"></a>
+</div>
+</footer>
+<div class="copyright">
+<p>© London Women Lovin' Tech Copyright 2020</p>
+</div>
+</body>
+
+
+</html> 
